@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Conversion</title>
+  <script>
+    // Function to convert Fahrenheit to Celsius and Kelvin
+    function convertTemperature(tempFahrenheit) {
+      // Convert Fahrenheit to Celsius
+      let tempCelsius = (tempFahrenheit - 32) * 5 / 9;
+
+      // Convert Celsius to Kelvin
+      let tempKelvin = tempCelsius + 273.15;
+
+      // Round the results to whole numbers using Math.floor()
+      tempCelsius = Math.floor(tempCelsius);
+      tempKelvin = Math.floor(tempKelvin);
+
+      // Create a string with the temperature values
+      let todaysForecast = `The current temperature outside is ${tempFahrenheit} degrees Fahrenheit, ${tempCelsius} degrees Celsius, and ${tempKelvin} degrees Kelvin.`;
+
+      // Log the forecast to the console
+      console.log(todaysForecast);
+
+      // Return the forecast string
+      return todaysForecast;
+    }
+
+    // Example usage with tempFahrenheit = 75
+    let tempFahrenheit = 75;
+    convertTemperature(tempFahrenheit);
+
+    // Bonus: Try changing the value of tempFahrenheit
+    tempFahrenheit = 83;
+    convertTemperature(tempFahrenheit);
+
+    // Bonus: Try assigning tempFahrenheit a negative value
+    tempFahrenheit = -5;
+    convertTemperature(tempFahrenheit);
+  </script>
+</head>
+<body>
+<h1>Look at the console!</h1>
+<script src="index.js"></script>
+</body>
+</html>
